@@ -1,0 +1,16 @@
+# orbslam2_ros_msgs/SaveTrajectory
+# srv definition for ORB_SLAM2::System::SaveTrajectoryTUM or SaveKeyFrameTrajectoryTUM
+# SaveTrajectoryTUM and SaveKeyFrameTrajectoryTUM requires ORB_SLAM2::System::Shutdown().
+# By calling this service, ORB_SLAM2 will be shutdowned.
+
+int8 SaveTrajectoryTUM=0
+int8 SaveKeyFrameTrajectoryTUM=1
+
+# File path to save trajectory or keytrajectory information
+string filepath
+# Set Request constants
+int8 which_method
+
+---
+
+bool is_filepath_valid

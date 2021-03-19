@@ -1,0 +1,10 @@
+# orbslam2_ros_msgs/SwitchMode
+# srv definition for ORB_SLAM2::System:::ActivateLocalizationMode(), DeactivateLocalizationMode()
+
+# if is_localization is true, Localization mode(ActiveLocalizationMode() which is only tracking) is called.
+# It not, SLAM mode(DeactiveLocalizationMode() which resumes local mapping) is called
+bool is_localization
+
+---
+
+# bool result
