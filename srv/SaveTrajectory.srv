@@ -1,16 +1,13 @@
 # orbslam2_ros_msgs/SaveTrajectory
-# srv definition for ORB_SLAM2::System::SaveTrajectoryTUM or SaveKeyFrameTrajectoryTUM
+# srv definition for ORB_SLAM2::System::SaveTrajectoryTUM and SaveKeyFrameTrajectoryTUM
 # SaveTrajectoryTUM and SaveKeyFrameTrajectoryTUM requires ORB_SLAM2::System::Shutdown().
-# By calling this service, ORB_SLAM2 will be shutdowned.
+# By calling this service, ORB_SLAM2 will be shutdowned, and save two files for Trajectory and KeyFrame.
 
-int8 SaveTrajectoryTUM=0
-int8 SaveKeyFrameTrajectoryTUM=1
-
-# File path to save trajectory or keytrajectory information
-string filepath
-# Set Request constants
-int8 which_method
+# Directory path to save trajectory and keytrajectory information
+string directory_path
 
 ---
 
-bool is_filepath_valid
+# For monocular-camera, trajectory is not saved. trajectory_file_path may be empty.
+string trajectory_file_path
+string keyframe_file_path
